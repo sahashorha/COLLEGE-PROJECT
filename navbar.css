@@ -1,0 +1,124 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+:root{
+    --bg-color:#ffffff;
+    --secoud-bg-color:#f9f9f9;
+    --text-color:#fff;
+    --secound-color:#161616;
+    --main-color:cyan;
+    --other-color:#6a6a6a;
+    --big-font:5.7rem;
+    --h2-font:3.8rem;
+    --p-font:1rem;
+}
+body{
+    background: var(--bg-color);
+    color:var(--text-color)
+}
+header{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    /* height: 100px; */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background: #000;
+    padding: 10px 6%;
+}
+.logo{
+    /* margin-top: 40px; */
+    font-size: 1.9rem;
+    font-weight: 600;
+    color:var(--text-color);
+}
+span{
+    color: var(--main-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist li{
+    position:relative;
+}
+.navlist li a{
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+.navlist a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+}
+.navlist a:hover::after{
+    width: 100%;
+}
+.navlist li ul.dropdown_menu li{
+    display: block;
+}
+.navlist li ul.dropdown_menu{
+    width: 200%;
+    background:#000;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.navlist li:hover ul.dropdown_menu {
+    display: block;
+   
+}
+.dropdown_menu a:hover{
+    color: var(--main-color);
+}
+
+
+#menu-icon{
+    font-size: 26px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+.h-btn a{
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 26px;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: ease .40s;
+}
+.h-btn .sign-up{
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 30px;
+}
+.h-btn .sign-up:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+.h-btn .Login{
+    color: var(--text-color);
+    background: var(--main-color);
+    border-radius: 30px;
+}
+.h-btn .Login:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
